@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--importing this library is important for creating 3D objects-->
+        <script src = "https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background = "color:#94B4FA">
+            <a-entity position = "0 0 25">
+                <a-camera></a-camera>
+            </a-entity>
+            
+            <a-entity>
+                <!--Abdomen-->
+                <a-box position = "0 0 -5" scale = "7 10 3" color = "gray"></a-box>
+
+                <!--Legs-->
+                <a-box position = "-2.5 -8 -5" scale = "3 6 3" color = "black" rotation = "0 0 -10"></a-box>
+                <a-box position = "2.5 -8 -5" scale = "3 6 3" color = "black" rotation = "0 0 10"></a-box>
+
+                <!--Arms-->
+                <a-box position = "6.5 3.5 -3" scale = "6 3 3" color = "black" rotation = "0 -60 0"></a-box>
+            </a-entity>
+
+            <a-entity>
+                <!--Joints-->
+                <!--b/w legs-->
+                <a-sphere position = "-3 -12 -5" radius = 1.25 color = "green"></a-sphere>
+                <a-sphere position = "3 -12 -5" radius = 1.25 color = "green"></a-sphere>
+
+                <!--b/w arms-->
+                
+                <a-sphere position = "8.2 3.5 0.3" radius = 1.25 color = "green"></a-sphere>
+            </a-entity>
+
+            <a-entity>
+                <!--End parts-->
+                <a-box position = "-3 -16 -5" scale = "3 6 3" color = "black" rotation = "0 0 5"></a-box>
+                <a-box position = "3 -16 -5" scale = "3 6 3" color = "black" rotation = "0 0 -5"></a-box>
+
+                
+                <a-box position = "8.5 3.5 4" scale = "3 3 6" color = "black"></a-box>
+            </a-entity>
+
+            <a-entity>
+                <!--Head-->
+                <a-cylinder position = "0 6 -5" radius = "1.4" height = "6" color = "red"></a-cylinder>
+            </a-entity>
+
+            <a-entity position = "0 0 0" rotation = "0 0 0" animation = "property: position; to: 0 -5 0; easing: linear; loop: true; dur: 3000">
+                <a-sphere position = "-1 8 -4" radius = "0.3" color = "yellow"></a-sphere>
+                <a-sphere position = "1 8 -4" radius = "0.3" color = "yellow"></a-sphere>
+            </a-entity>
+
+            <a-entity position = "0 0 0" rotation = "0 0 0" animation = "property: rotation; to: 0 0 -20; easing: linear; loop: true; dur: 5000">
+                <a-box position = "-6.75 1.5 -5" scale = "6 3 3" color = "black" rotation = "0 0 40"></a-box>
+                <a-sphere position = "-9.7 -0.8 -5" radius = 1.25 color = "green"></a-sphere>
+                <a-box position = "-11 -2 -2" scale = "3 3 6" color = "black" rotation = "0 0 30"></a-box>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
